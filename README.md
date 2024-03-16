@@ -29,8 +29,15 @@ Very easy and powerful Roles/Permissions System out the box.
 You may create a new InuPress project with the following command:
 
 ```
-$ composer create-project inupress/inupress example-app
+composer create-project inupress/inupress example-app
 ```
+
+Then install admin panel with command:
+```
+php artisan app:install
+```
+
+This command will make database migrations and create default admin account: root@root.root/password.
 
 ## License
 
