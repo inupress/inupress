@@ -1,6 +1,6 @@
 # InuPress
 
-[InuPress](https://inupress.dev) is a free, open-source content management system based on the [Laravel](https://laravel.com) PHP framework and [Filament](https://filamentphp.com/) components.
+[InuPress](https://inupress.dev) is a free, open-source content management system, based on the [Laravel](https://laravel.com) PHP framework and [Filament](https://filamentphp.com/) components.
 
 ## Advantages of InuPress
 
