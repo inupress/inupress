@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+ * Fix: Route [login] not defined error
+ */
+foreach (filament()->getPanels() as $panel) {
+    Route::redirect('/login', $panel->getPath() . '/login')->name('login');
+}
