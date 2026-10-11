@@ -14,6 +14,7 @@
         "filament/filament": "~5.10.1",
         "inupress/core": "^0.1",
         "inupress/pages": "^0.1",
+        "inupress/theme-default": "^0.1",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
         "php": "^8.3"
@@ -45,9 +46,7 @@
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
-            "@php artisan migrate --force",
-            "npm install --ignore-scripts",
-            "npm run build"
+            "@php artisan migrate --force"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",

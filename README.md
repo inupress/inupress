@@ -29,7 +29,28 @@ php artisan inupress:plugin:list   # installed plugins
 
 Composer is the only switch: there is no enable/disable toggle. Installed plugins show up in the admin panel on their own.
 
-This starter includes [`inupress/pages`](https://github.com/inupress/pages). Pages are served at `/pages/{slug}`.
+This starter includes [`inupress/pages`](https://github.com/inupress/pages) and
+[`inupress/theme-default`](https://github.com/inupress/theme-default). Pages are served at `/pages/{slug}`.
+
+## Themes
+
+The site renders through `inupress/theme-default` out of the box — a Tailwind 4 shell with Alpine.
+Nothing to configure and nothing to build: a theme is a Composer package holding views, a `theme.json`
+manifest and its **prebuilt** CSS/JS, so you never run Node. If something is off with the assets:
+
+```bash
+php artisan inupress:theme:publish    # re-copy them into public/vendor (done on the first request too)
+```
+
+To change the look without editing the package, create a child theme in your own project:
+
+```
+themes/acme/theme.json     {"name": "Acme", "parent": "inupress/theme-default"}
+themes/acme/resources/views/components/layout.blade.php
+```
+
+then set `INUPRESS_THEME=acme`. The child overrides the parent's views one by one and survives
+`composer update`. See <https://github.com/inupress/framework/blob/main/docs/themes.md>.
 
 ## Access
 
