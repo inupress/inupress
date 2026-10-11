@@ -15,6 +15,7 @@
         "inupress/core": "^0.1",
         "inupress/menus": "^0.1",
         "inupress/pages": "^0.1",
+        "inupress/seo": "^0.1",
         "inupress/theme-default": "^0.1",
         "inupress/widgets": "^0.1",
         "laravel/framework": "^13.17",

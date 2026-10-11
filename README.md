@@ -31,10 +31,11 @@ Composer is the only switch: there is no enable/disable toggle. Installed plugin
 
 This starter includes [`inupress/pages`](https://github.com/inupress/pages),
 [`inupress/menus`](https://github.com/inupress/menus),
-[`inupress/widgets`](https://github.com/inupress/widgets) and
+[`inupress/widgets`](https://github.com/inupress/widgets),
+[`inupress/seo`](https://github.com/inupress/seo) and
 [`inupress/theme-default`](https://github.com/inupress/theme-default). Pages are served at
-`/pages/{slug}`, the navigation and the footer are editable under **Menus** and **Widgets**, and
-there is nothing to build: no Node, no bundler.
+`/pages/{slug}`, the navigation and the footer are editable under **Menus** and **Widgets**,
+`/sitemap.xml` and `/robots.txt` are served, and there is nothing to build: no Node, no bundler.
 
 ## Navigation and blocks
 
