@@ -29,8 +29,24 @@ php artisan inupress:plugin:list   # installed plugins
 
 Composer is the only switch: there is no enable/disable toggle. Installed plugins show up in the admin panel on their own.
 
-This starter includes [`inupress/pages`](https://github.com/inupress/pages) and
-[`inupress/theme-default`](https://github.com/inupress/theme-default). Pages are served at `/pages/{slug}`.
+This starter includes [`inupress/pages`](https://github.com/inupress/pages),
+[`inupress/menus`](https://github.com/inupress/menus),
+[`inupress/widgets`](https://github.com/inupress/widgets) and
+[`inupress/theme-default`](https://github.com/inupress/theme-default). Pages are served at
+`/pages/{slug}`, the navigation and the footer are editable under **Menus** and **Widgets**, and
+there is nothing to build: no Node, no bundler.
+
+## Navigation and blocks
+
+A theme decides where a plugin may put something, and nothing breaks when a plugin is missing:
+
+```blade
+@includeIf('inupress-menus::nav', ['name' => 'primary'])
+@includeIf('inupress-widgets::area', ['name' => 'footer'])
+```
+
+Menus are built out of pages and custom links, widgets fill the areas your theme renders
+(`footer`, `sidebar`, `home` in the default theme).
 
 ## Themes
 
